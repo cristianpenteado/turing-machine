@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/animation.css" />
+		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="js/turing.js"></script>
+		<script src="js/main.js"></script>
+		<title>Turing Machine Simulator for Binary Palindromes</title>
+	</head>
+	<body>
+		<header>
+			<h1 class="text-center">TURING MACHINE SIMULATOR</h1>
+			<h2 class="text-center">for Binary Palindromes</h2>
+		</header>
+		<!-- Fita da máquina -->
+		<div id="tape-box">
+			<ul class="list-group list-group-horizontal">
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+				<li class="list-group-item item"></li>
+			</ul>
+			<!-- Cabeça de leitura -->
+			<img id="head" src="https://image.flaticon.com/icons/png/512/57/57056.png" width="35" height="35" />
+			<!-- Formulário para entrada da palavra -->
+			<div id="input-data">
+				<form class="form-inline" id="form-submit">
+					<div class="input-group mb-3">
+						<input
+							id="input-value"
+							type="text"
+							maxlength="27"
+							class="form-control"
+							placeholder="Insert an entry..."
+						/>
+						<div class="input-group-append">
+							<input id="btn-load" class="btn btn-success" type="submit" value="Load" />
+						</div>
+						<div class="input-group-append">
+							<button id="btn-click" class="btn btn-info" type="button" value="Run" disabled>
+								Play
+								<img
+									src="https://pngimage.net/wp-content/uploads/2018/06/simbolo-play-png-1.png"
+									width="20"
+									height="20"
+								/>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- Campos de sucesso e falha das palavras digitadas -->
+		<div id="success" class="alert alert-success text-center"></div>
+		<div id="fail" class="alert alert-danger text-center"></div>
+		<div id="steps">
+			<h2 class="text-center">Step by step</h2>
+			<div id="all-steps"></div>
+		</div>
+		<!-- Script para  manipulação dos eventos -->
+		<script type="text/javascript" src="js/index.js"></script>
+	</body>
+</html>

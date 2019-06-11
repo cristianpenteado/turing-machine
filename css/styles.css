@@ -1,0 +1,63 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#tape-box {
+	width: 97%;
+	height: 300px;
+	padding-left: 2%;
+	margin-top: 2%;
+}
+
+.tape {
+	list-style: none;
+	width: 100%;
+}
+
+.list-group-item.item {
+	padding: 0;
+	border: 1px solid #000000;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-weight: bold;
+}
+
+#input-data {
+	margin-top: 5%;
+}
+
+header {
+	font-family: 'Press Start 2P', cursive;
+}
+
+#form-submit {
+	margin: auto;
+	width: 350px;
+}
+
+#btn-load,
+#btn-click {
+	margin-left: 10px;
+	border-radius: 50px;
+}
+
+#success,
+#fail {
+	display: none;
+}
+
+#steps {
+	text-align: center;
+	display: none;
+	margin-bottom: 50px;
+	font-size: 11pt;
+}
+
+#steps h2 {
+	margin-top: 100px;
+	text-transform: uppercase;
+	font-family: 'Press Start 2P', cursive;
+}
