@@ -1,18 +1,25 @@
 function transition(word) {
     if (validateWord(word)) {
-        /* Fragmenta a palavra em um array juntamente com um spreed com ''*/
+
+        /* Adicina cada um dos caracteres da palavra em um array 
+         * juntamente com um valor em branco para a máquina entender
+         * o fim da palavra de entrada durante a leitura */
         let fragmentedWord = [...word.split(''), ''];
+
         /* Declaração de variáveis */
-        let count = 0, position = 0, currentState = 0, imagePosition = 50;
+        let count = 0, position = 0, currentState = 0;
         let symbol, move, next_state, write;
 
         /* Enquanto o estado não for o final ou se a palavra não for um palíndromo
          * Serão percorridos os estados da máquina */
-        while (currentState != 8) {
+        while (currentState != (turing.states.length - 1)) {
+
             /* Essa variável recebe o objto do JSON conforme o símbolo lido */
             symbol = turing.states[currentState][fragmentedWord[position]];
+
             /* Exibe o passo a passo do que está acontecendo na máquina */
             showSteps(symbol, count, currentState, fragmentedWord[position]);
+            
             /* Se não for um palíndromo entra aqui */
             if (symbol == undefined) {
                 defineFail(word);
@@ -43,7 +50,7 @@ function transition(word) {
 }
 
 /* 
- * Validação da entrada de dados 
+ * Validação da entrada de dados conforme o alfabeto de entrada da máquina
  */
 function validateWord(word) {
     let valueReturn = false;
