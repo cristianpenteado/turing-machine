@@ -9,9 +9,7 @@
 -  [Alfabeto](#id04)
 -  [Diagrama de Estados](#id05)
 -  [Função de Transição](#id06)
--  [Código Funcional](#id07)
--  [Código de Validação](#id08)
--  [Referências](#id08)
+-  [Referências](#id07)
 
 ## Objetivo:<a name="id01"></a>
 
@@ -55,52 +53,7 @@ Exemplos: "radar", "mirim", "A torre da derrota", "11011", etc..
 
 ![tabelafuncao](https://ap.imagensbrasil.org/images/2019/05/23/tabelafuncao.png)
 
-## Código funcional:<a name="id07"></a>
-
-```javascript
-function transition(word) {
-    if (validateWord(word)) {
-        let fragmentedWord = [...word.split(''), ''];
-        let count = 0, position = 0, currentState = 0;
-        let symbol, move, next_state, write;
-
-        while (currentState != 8) {
-            symbol = turing.states[currentState][fragmentedWord[position]];
-            showSteps(symbol, count, currentState, fragmentedWord[position]);
-            if (symbol == undefined) {
-                defineFail(word);
-                break;
-            }
-
-            move = symbol.move;
-            next_state = symbol.next_state;
-            write = symbol.write;
-            currentState = next_state;
-            fragmentedWord[position] = write;
-
-            position = move == 'right' ? position + 1 : position - 1;
-            count++;
-
-            if (currentState == 8) defineSuccess(word, count);
-        }
-    } else defineFail(word);
-}
-```
-
-## Código de validação:<a name="id08"></a>
-
-```javascript
-function validateWord(word) {
-    let valueReturn = false;
-    for (const i in word) {
-        if (word.charAt(i) != 0 && word.charAt(i) != 1) valueReturn = false;
-        else valueReturn = true;
-    }
-    return valueReturn;
-}
-```
-
-## Referências:<a name="id09"></a>  
+## Referências:<a name="id07"></a>  
 
 1.  [Definição de Palíndromo.](https://pt.wikipedia.org/wiki/Pal%C3%ADndromo)
 2.  [O que é uma Máquina de Turing?](http://www.dainf.ct.utfpr.edu.br/~rdutra/courses/2015-2/tc_aulas/aula9.pdf)

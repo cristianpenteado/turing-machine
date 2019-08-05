@@ -35,8 +35,8 @@ function transition(word) {
 
             /* Incrementa o contador de operações na fita */
             count++;
-
-            if (currentState == 8) defineSuccess(word, count);
+            
+            if (currentState == (turing.states.length - 1)) defineSuccess(word, count);
         }
         /* Se o alfabeto for inválido entra aqui */
     } else defineFail(word);
