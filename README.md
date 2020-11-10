@@ -1,6 +1,4 @@
-# Turing Machine for Binary Palindrome (Máquina de Turing para Palíndromo Binário)
-
--  ### Autores: [Cristian Penteado](http://github.com/cristianpenteado) & [Douglas Scaini](http://github.com/douglasscaini)
+# Turing Machine for Binary Palindrome
 
  ## Índice
 -  [Objetivo](#id01)
@@ -47,11 +45,16 @@ Exemplos: "radar", "mirim", "A torre da derrota", "11011", etc..
 
 ## Diagrama de Estados:<a name="id05"></a>
 
-![diagrama de estados](https://ap.imagensbrasil.org/images/2019/05/23/diagrama.png)
+![diagrama de estados](./assets/diagram-state.png)
 
 ## Função de transição (δ):<a name="id06"></a>
 
-![tabelafuncao](https://ap.imagensbrasil.org/images/2019/05/23/tabelafuncao.png)
+![tabelafuncao](./assets/table.png)
+
+## Contribuidores
+
+<a href="https://github.com/douglasscaini" ><img width="50" style="border-radius:2em" src="https://avatars0.githubusercontent.com/u/41807133?v=4" alt="douglasscaini"></a>
+
 
 ## Referências:<a name="id07"></a>  
 
